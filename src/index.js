@@ -51,7 +51,7 @@ const formatModule = ({ passElementProps }, imports, content) => {
   return moduleText;
 };
 
-export default function(source) {
+module.exports = function(source) {
   // This loader is deterministic and will return the same thing for the same inputs!
   this.cacheable && this.cacheable();
 

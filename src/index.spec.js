@@ -19,9 +19,9 @@ const TRANSFORM_WITH_BABEL = (code) => BabelTransform(code, require('../package.
 const REQUIRE_STRING_MODULE = (code) => (
   // We have to explicitly expose React to the `eval` context otherwise it's hidden
   function(React) { // eslint-disable-line no-unused-vars
-    const exports = {};
+    const module = {};
     eval(code); // eslint-disable-line no-eval
-    return exports;
+    return module.exports;
   }
 )(React);
 
